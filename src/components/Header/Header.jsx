@@ -15,7 +15,7 @@ const Header = ({ currentTheme, onChangeTheme }) => {
   return (
     <Container>
       <h1>calc</h1>
-      <Toggle label="theme" withNumbers currentTheme={currentTheme} onChangeTheme={onChangeTheme} />
+      <Toggle label="theme" withNumbers current={currentTheme} onChange={onChangeTheme} totalOptions={3} showOptionLabels />
     </Container>
   );
 };

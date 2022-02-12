@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Spartan', sans-serif;
     background: ${(props) => props.theme.background1};
     transition: background-color 250ms;
+    color: ${(props) => props.theme.mainText}
   }
 `;
 

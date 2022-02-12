@@ -7,10 +7,13 @@ const StyledBlock = styled(Block)`
   font-size: 2.5em;
   text-align: right;
   background: ${(props) => props.theme.background3};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
-const Result = () => {
-  return <StyledBlock>399,981</StyledBlock>;
+const Result = ({ result }) => {
+  return <StyledBlock>{result}</StyledBlock>;
 };
 
 export default Result;
