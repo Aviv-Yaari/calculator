@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1em;
 `;
 
-const Label = styled.span`
+export const Label = styled.span`
   margin-right: 20px;
   text-transform: uppercase;
   font-size: 0.8em;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   background: ${(props) => props.theme.background2};
   border: none;
   border-radius: 10px;
@@ -24,7 +24,7 @@ const Button = styled.button`
   color: inherit;
 `;
 
-const Circle = styled.div`
+export const Circle = styled.div`
   background: ${(props) => props.theme.toggleBackground};
   width: 16px;
   height: 16px;
@@ -39,7 +39,7 @@ const Circle = styled.div`
   transition: left 250ms;
 `;
 
-const OptionLabel = styled.span`
+export const OptionLabel = styled.span`
   font-size: 0.85em;
   position: absolute;
   bottom: 26px;
@@ -50,22 +50,3 @@ const OptionLabel = styled.span`
     return minPosition + stepSize * props.value;
   }}px;
 `;
-
-const Toggle = ({ label, current, totalOptions, showOptionLabels, onChange }) => {
-  return (
-    <Container>
-      <Label>{label}</Label>
-      <Button onClick={onChange}>
-        {showOptionLabels &&
-          [...Array(totalOptions).keys()].map((optionNum) => (
-            <OptionLabel key={optionNum} value={optionNum} totalOptions={totalOptions}>
-              {optionNum + 1}
-            </OptionLabel>
-          ))}
-        <Circle current={current} totalOptions={totalOptions} />
-      </Button>
-    </Container>
-  );
-};
-
-export default Toggle;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Toggle from "../shared/Toggle";
+import Toggle from "../shared/Toggle/Toggle";
 
 const Container = styled.section`
   line-height: 1.5;
@@ -8,7 +8,6 @@ const Container = styled.section`
   padding: 10px;
 `;
 
-const options = ["on", "off"];
 const DevTools = ({ operation, result, previousResult, isReset }) => {
   const [isActivated, setIsActivated] = useState(false);
   const handleToggle = () => setIsActivated((isActivated) => !isActivated);

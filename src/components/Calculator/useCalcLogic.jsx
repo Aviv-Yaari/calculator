@@ -20,8 +20,6 @@ const useCalcLogic = () => {
   };
 
   const handleKeyClick = (value) => {
-    console.log("handleKeyClick (" + value + ")");
-    console.log("typeof value: ", typeof value);
     switch (value) {
       case ".":
         setResult((result) => result + ".");
@@ -31,7 +29,9 @@ const useCalcLogic = () => {
           if (typeof result === "number") {
             if (result % 1) return parseFloat(result.toString().slice(0, -1));
             else return parseInt(result / 10);
-          } else if (typeof result === "string" && result.charAt(result.length - 1) === ".") return parseInt(result);
+          } else if (typeof result === "string" && result.charAt(result.length - 1) === ".") {
+            return parseInt(result);
+          }
         });
         break;
       case "RESET":

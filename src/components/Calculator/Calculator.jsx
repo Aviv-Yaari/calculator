@@ -1,26 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import styled from "styled-components";
 import DevTools from "../DevTools/DevTools";
 import Header from "../Header/Header";
 import Keys from "../Keys/Keys";
 import Result from "../Result/Result";
+import { Container, MainWrapper } from "./Calculator.styled";
 import useCalcLogic from "./useCalcLogic";
-
-const MainWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-`;
-
-const Container = styled.div`
-  width: 100%;
-  max-width: calc(10em + 320px);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 0 10px;
-`;
 
 const Calculator = ({ currentTheme, onChangeTheme }) => {
   const { result, previousResult, operation, isReset, handleKeyClick, handleKeyboardClick } = useCalcLogic();

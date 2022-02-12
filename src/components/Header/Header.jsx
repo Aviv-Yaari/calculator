@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Toggle from "../shared/Toggle";
+import Toggle from "../shared/Toggle/Toggle";
 
 const Container = styled.div`
   display: flex;
@@ -7,6 +7,7 @@ const Container = styled.div`
   align-items: center;
   color: ${(props) => props.theme.mainText};
   h1 {
+    margin-top: 1rem;
     font-size: 2em;
   }
 `;
