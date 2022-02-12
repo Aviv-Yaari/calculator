@@ -10,6 +10,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin: 0 10px;
 `;
 
 const Calculator = ({ currentTheme, onChangeTheme }) => {
