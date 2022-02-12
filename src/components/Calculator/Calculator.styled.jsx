@@ -13,5 +13,5 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 0 10px;
+  margin: 0 20px;
 `;
