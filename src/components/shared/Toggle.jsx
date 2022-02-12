@@ -17,6 +17,7 @@ const Button = styled.button`
   border: none;
   border-radius: 10px;
   padding: 4px 20px;
+  cursor: pointer;
 `;
 
 const Circle = styled.div`
@@ -29,7 +30,7 @@ const Circle = styled.div`
   transition: left 250ms;
 `;
 
-const Toggle = ({ label, withNumbers, currentTheme, onChangeTheme }) => {
+const Toggle = ({ label, currentTheme, onChangeTheme }) => {
   return (
     <Container>
       <Label>{label}</Label>

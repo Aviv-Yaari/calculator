@@ -6,7 +6,7 @@ import Result from "../Result/Result";
 
 const Container = styled.div`
   width: 100%;
-  max-width: 425px;
+  max-width: 485px;
   display: flex;
   flex-direction: column;
   gap: 20px;
